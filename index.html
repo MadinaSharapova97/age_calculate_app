@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: hsl(0, 0%, 86%);
+    }
+
+    .container {
+      -webkit-border-radius: 15px;
+      -webkit-border-bottom-right-radius: 120px;
+      -moz-border-radius: 15px;
+      -moz-border-radius-bottomright: 120px;
+      border-radius: 15px;
+      border-bottom-right-radius: 120px;
+      background-color: #fff;
+      width: 650px;
+      padding: 30px;
+      position: relative;
+    }
+
+    .inputs_wrapper {
+      display: flex;
+      gap: 40px;
+      border-bottom: 2px solid hsl(0, 0%, 86%);
+      padding-bottom: 40px;
+    }
+
+    label {
+      color: hsl(0, 1%, 44%);
+      font-weight: 700;
+
+    }
+
+    input {
+      width: 100px;
+      padding: 5px;
+      font-size: 32px;
+      font-weight: 600;
+      border: solid 1px hsl(0, 0%, 86%);
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 12px;
+      color: hsl(0, 100%, 67%);
+    }
+
+    #icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: hsl(259, 100%, 65%);
+      padding: 10px;
+      position: absolute;
+      left: 85%;
+      transform: translate(0%, -50%);
+    }
+
+    #icon:hover {
+      cursor: pointer;
+    }
+
+    #icon:active {
+      background-color: hsl(0, 0%, 8%);
+    }
+
+    i {
+      font-weight: 800;
+      font-size: 70px;
+      color: hsl(0, 0%, 8%);
+
+    }
+
+    span {
+      color: hsl(259, 100%, 65%);
+    }
+
+    @media (max-width:375px) {
+      .container {
+        width: 95%;
+      }
+
+      .inputs_wrapper {
+        gap: 10px;
+        padding-bottom: 70px;
+        margin-bottom: 50px;
+      }
+
+      input {
+        width: 90px;
+      }
+
+      i {
+        font-size: 60px;
+      }
+
+      #icon {
+        left: 40%;
+        transform: translate(0%, -120%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="inputs_wrapper">
+      <div class="inputs">
+        <label for="">DAY</label><br>
+        <input id="dd" type="text" placeholder="DD">
+        <p class="error"></p>
+      </div>
+      <div>
+        <label for="">MONTH</label><br>
+        <input id="mm" type="text" placeholder="MM">
+        <p class="error"></p>
+      </div>
+      <div>
+        <label for="">YEAR</label><br>
+        <input id="yy" type="text" placeholder="YYYY">
+        <p class="error"></p>
+      </div>
+
+    </div>
+    <div id="icon">
+      <img src="./assets/images/icon-arrow.svg" alt="">
+    </div>
+
+    <i><span id="year">--</span>years</i><br>
+    <i><span id="month">--</span>month</i><br>
+    <i><span id="day">--</span>days</i><br>
+
+  </div>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
